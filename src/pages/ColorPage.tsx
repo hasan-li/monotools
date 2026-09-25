@@ -36,7 +36,9 @@ export default function ColorPage() {
     : inputColor.trim() && !formats ? 'INVALID CSS COLOR' : '';
 
   return (
-    <section className="color-page" aria-label="Color converter">
+    <>
+      <p className="page-summary">Convert CSS colors between HEX, RGB, HSL, HSV, and CMYK.</p>
+      <section className="color-page" aria-label="Color converter">
       <div className="color-entry">
         <input type="text" className="color-input" value={inputColor} onChange={(event) => { setInputColor(event.target.value); setCopiedFormat(''); }} placeholder="#6366f1" aria-label="CSS color" aria-invalid={Boolean(inputColor.trim() && !formats)} aria-describedby="color-status" autoFocus />
         <span id="color-status" className={`context-status ${inputColor.trim() && !formats ? 'is-error' : ''}`} role="status" aria-live="polite" aria-atomic="true">{status}</span>
@@ -54,6 +56,7 @@ export default function ColorPage() {
           </button>
         ))}
       </div>
-    </section>
+      </section>
+    </>
   );
 }

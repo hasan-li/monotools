@@ -12,14 +12,17 @@ const tools = [
 
 export default function HomePage({ linkForPath, onNavigateClick }: HomePageProps) {
   return (
-    <nav className="tool-index" aria-label="Tools">
-      {tools.map((tool) => (
-        <a key={tool.path} href={linkForPath(tool.path)} onClick={(event) => onNavigateClick(event, tool.path)} className="index-row">
-          <span className="index-number">{tool.index}</span>
-          <span className="index-name">{tool.name}</span>
-          <span className="index-meta">{tool.meta}</span>
-        </a>
-      ))}
-    </nav>
+    <>
+      <p className="page-summary">Fast, private browser tools. No uploads or accounts.</p>
+      <nav className="tool-index" aria-label="Tools">
+        {tools.map((tool) => (
+          <a key={tool.path} href={linkForPath(tool.path)} onClick={(event) => onNavigateClick(event, tool.path)} className="index-row">
+            <span className="index-number">{tool.index}</span>
+            <span className="index-name">{tool.name}</span>
+            <span className="index-meta">{tool.meta}</span>
+          </a>
+        ))}
+      </nav>
+    </>
   );
 }

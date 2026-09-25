@@ -1,12 +1,15 @@
 # tools
 
-ASCII-first tools directory built with React + Vite.
+ASCII-first, private browser tools built with React + Vite.
 
-## Available routes
+**Live:** https://hasan-li.github.io/tools/
 
-- `/` main tools index
-- `/json` JSON formatter / validator with ASCII tree view
-- `/color` color converter (single input, multi-format output)
+## Available tools
+
+- [JSON formatter and validator](https://hasan-li.github.io/tools/json/) — format, validate, recursively sort, copy, and inspect JSON in an ASCII tree; preserves large integers exactly
+- [CSS color converter](https://hasan-li.github.io/tools/color/) — convert CSS colors to HEX, RGB, HSL, HSV, and CMYK
+
+Inputs are processed locally and never uploaded.
 
 ## Run locally
 

@@ -72,6 +72,15 @@ button { color: inherit; }
   outline-offset: 3px;
 }
 
+.page-summary {
+  max-width: 72ch;
+  margin: 20px 0 0;
+  color: var(--muted);
+  font: 400 .75rem/1.6 var(--font-mono);
+}
+.page-summary + .tool-index,
+.page-summary + .json-workspace,
+.page-summary + .color-page { margin-top: 12px; }
 .tool-index {
   width: min(900px, 100%);
   margin-top: 24px;

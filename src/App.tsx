@@ -9,9 +9,9 @@ type ToolPath = '/' | '/json' | '/color';
 const BASE_URL = import.meta.env.BASE_URL;
 const THEME_STORAGE_KEY = 'tools-theme';
 const ROUTE_META: Record<string, { label: string; title: string; description: string }> = {
-  '/': { label: 'INDEX', title: 'Tools Directory | JSON Formatter and Color Converter', description: 'ASCII-first tools for JSON formatting and color conversion.' },
-  '/json': { label: 'JSON', title: 'JSON Tool | Tools Directory', description: 'Format, validate, sort, copy, and inspect JSON locally.' },
-  '/color': { label: 'COLOR', title: 'Color Tool | Tools Directory', description: 'Convert CSS colors to HEX, RGB, HSL, HSV, and CMYK.' },
+  '/': { label: 'INDEX', title: 'Developer Tools — JSON Formatter and Color Converter', description: 'Fast, private browser tools for formatting and validating JSON and converting CSS colors. No uploads or accounts.' },
+  '/json': { label: 'JSON', title: 'JSON Formatter & Validator — Private, Exact Large Integers', description: 'Format, validate, sort, copy, and inspect JSON locally. Preserves large integers exactly and supports files up to 5 MB.' },
+  '/color': { label: 'COLOR', title: 'CSS Color Converter — HEX, RGB, HSL, HSV and CMYK', description: 'Convert CSS colors to HEX, RGB, HSL, HSV, and CMYK instantly with a live preview and one-click copy.' },
 };
 
 const basePrefix = BASE_URL === '/' ? '' : BASE_URL.replace(/\/$/, '');

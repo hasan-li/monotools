@@ -225,7 +225,9 @@ export default function JsonPage() {
           : result.status === 'processing' ? 'Processing…' : '';
 
   return (
-    <section className="json-workspace" aria-label="JSON formatter">
+    <>
+      <p className="page-summary">Format and inspect JSON locally. Large integers stay exact; files never leave your browser.</p>
+      <section className="json-workspace" aria-label="JSON formatter">
       <article className="workspace-pane input-pane" onDragOver={(event) => event.preventDefault()} onDrop={onDrop}>
         <header className="workspace-header">
           <h2 className="workspace-title">01 INPUT</h2>
@@ -270,6 +272,7 @@ export default function JsonPage() {
           </div>
         ) : null}
       </article>
-    </section>
+      </section>
+    </>
   );
 }

@@ -1,0 +1,12 @@
+# Developer Tools
+
+> Fast, private browser utilities by Hasan Hasanli. All processing happens locally; no input is uploaded.
+
+## Tools
+
+- [JSON Formatter and Validator](https://hasan-li.github.io/tools/json/): Format, validate, recursively sort, copy, and inspect JSON in a collapsible ASCII tree. Preserves integers beyond JavaScript's safe integer range and accepts files up to 5 MB.
+- [CSS Color Converter](https://hasan-li.github.io/tools/color/): Convert CSS colors to HEX, HEXA, RGB, RGBA, HSL, HSLA, HSV, and CMYK with live preview and one-click copy.
+
+## Source
+
+- [GitHub repository](https://github.com/hasan-li/tools)
