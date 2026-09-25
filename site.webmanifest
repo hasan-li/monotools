@@ -1,14 +1,17 @@
 {
-  "name": "tools",
-  "short_name": "tools",
+  "name": "Developer Tools",
+  "short_name": "Tools",
+  "description": "Private browser tools for JSON formatting and CSS color conversion.",
+  "start_url": "/tools/",
+  "scope": "/tools/",
   "icons": [
     {
-      "src": "/favicon.svg",
+      "src": "/tools/favicon.svg",
       "sizes": "any",
       "type": "image/svg+xml"
     }
   ],
-  "theme_color": "#111111",
-  "background_color": "#111111",
+  "theme_color": "#191713",
+  "background_color": "#f6f3ed",
   "display": "standalone"
 }
