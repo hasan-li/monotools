@@ -6,15 +6,15 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'),
+      '@': path.resolve(import.meta.dirname, './src'),
     },
   },
   build: {
     rollupOptions: {
       input: {
-        main: path.resolve(__dirname, 'index.html'),
-        json: path.resolve(__dirname, 'json/index.html'),
-        color: path.resolve(__dirname, 'color/index.html'),
+        main: path.resolve(import.meta.dirname, 'index.html'),
+        json: path.resolve(import.meta.dirname, 'json/index.html'),
+        color: path.resolve(import.meta.dirname, 'color/index.html'),
       },
     },
   },

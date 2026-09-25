@@ -21,6 +21,15 @@ npm run dev
 npm run build
 ```
 
+## JSON verification
+
+```bash
+npm run check:json
+npm run bench:json
+```
+
+The benchmark covers small, deeply nested, root primitive, unsafe integer, generated 5 MB, invalid, and truncated inputs. It reports median parse, recursive sort, format, tree preparation, and React static-render times separately. Static rendering isolates React element work; use a browser profiler when DOM commit and paint measurements are needed.
+
 ## GitHub Pages notes
 
 - `vite.config.ts` uses `base: '/tools/'` for a repository named `tools`.

@@ -5,7 +5,6 @@ on:
     branches: [ main ]
   workflow_dispatch:
 
-# Add this permissions block
 permissions:
   contents: write
 
@@ -13,11 +12,15 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 22
+          cache: npm
       - run: npm ci
+      - run: npm run lint
+      - run: npm run check:json
+      - run: npm run bench:json
       - run: npm run build
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
