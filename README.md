@@ -1,4 +1,4 @@
-# tools
+# monotools
 
 ASCII-first, private browser tools built with React + Vite.
 
