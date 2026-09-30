@@ -1,12 +1,12 @@
 {
-  "name": "Developer Tools",
-  "short_name": "Tools",
+  "name": "MonoTools",
+  "short_name": "MonoTools",
   "description": "Private browser tools for JSON formatting and CSS color conversion.",
-  "start_url": "/tools/",
-  "scope": "/tools/",
+  "start_url": "/monotools/",
+  "scope": "/monotools/",
   "icons": [
     {
-      "src": "/tools/favicon.svg",
+      "src": "/monotools/favicon.svg",
       "sizes": "any",
       "type": "image/svg+xml"
     }
