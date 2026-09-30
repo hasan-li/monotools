@@ -1,5 +1,5 @@
 {
-  "name": "tools",
+  "name": "monotools",
   "author": "Hasan Hasanli",
   "version": "0.0.1",
   "type": "module",
@@ -9,9 +9,11 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "check:json": "node --experimental-strip-types bench/exact-number.ts",
+    "check:diff": "node --experimental-strip-types bench/diff-check.ts",
     "bench:json": "node --experimental-strip-types bench/json-performance.ts"
   },
   "dependencies": {
+    "diff": "^9.0.0",
     "json-bigint": "^1.0.0",
     "react": "^19.3.0",
     "react-dom": "^19.3.0"

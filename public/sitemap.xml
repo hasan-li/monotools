@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://hasan-li.github.io/tools/</loc>
+    <loc>https://hasan-li.github.io/monotools/</loc>
     <lastmod>2026-09-25</lastmod>
   </url>
   <url>
-    <loc>https://hasan-li.github.io/tools/json/</loc>
+    <loc>https://hasan-li.github.io/monotools/json/</loc>
     <lastmod>2026-09-25</lastmod>
   </url>
   <url>
-    <loc>https://hasan-li.github.io/tools/color/</loc>
+    <loc>https://hasan-li.github.io/monotools/color/</loc>
     <lastmod>2026-09-25</lastmod>
+  </url>
+  <url>
+    <loc>https://hasan-li.github.io/monotools/diff/</loc>
   </url>
 </urlset>

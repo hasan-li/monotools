@@ -2,16 +2,18 @@ import { useCallback, useEffect, useLayoutEffect, useRef, useState, type MouseEv
 import ColorPage from './pages/ColorPage';
 import HomePage from './pages/HomePage';
 import JsonPage from './pages/JsonPage';
+import DiffPage from './pages/DiffPage';
 
 type Theme = 'light' | 'dark';
-type ToolPath = '/' | '/json' | '/color';
+type ToolPath = '/' | '/json' | '/color' | '/diff';
 
 const BASE_URL = import.meta.env.BASE_URL;
 const THEME_STORAGE_KEY = 'tools-theme';
 const ROUTE_META: Record<string, { label: string; title: string; description: string }> = {
-  '/': { label: 'INDEX', title: 'Developer Tools — JSON Formatter and Color Converter', description: 'Fast, private browser tools for formatting and validating JSON and converting CSS colors. No uploads or accounts.' },
-  '/json': { label: 'JSON', title: 'JSON Formatter & Validator — Private, Exact Large Integers', description: 'Format, validate, sort, copy, and inspect JSON locally. Preserves large integers exactly and supports files up to 5 MB.' },
-  '/color': { label: 'COLOR', title: 'CSS Color Converter — HEX, RGB, HSL, HSV and CMYK', description: 'Convert CSS colors to HEX, RGB, HSL, HSV, and CMYK instantly with a live preview and one-click copy.' },
+  '/': { label: 'INDEX', title: 'MonoTools — JSON, Color and Text Diff Tools', description: 'Private browser tools for JSON, CSS colors, and text comparison. No uploads or accounts.' },
+  '/diff': { label: 'DIFF', title: 'Text Diff Checker — Compare Text Online | MonoTools', description: 'Compare two texts locally. See full texts side by side with line and character-level highlights. Up to 1 MiB per input, no uploads.' },
+  '/json': { label: 'JSON', title: 'JSON Formatter & Validator | MonoTools', description: 'Format, validate, sort, copy, and inspect JSON locally. Preserves large integers exactly and supports files up to 5 MB.' },
+  '/color': { label: 'COLOR', title: 'Color Converter — HEX, RGB, HSL & CMYK | MonoTools', description: 'Convert CSS colors to HEX, RGB, HSL, HSV, and CMYK instantly with a live preview and one-click copy.' },
 };
 
 const basePrefix = BASE_URL === '/' ? '' : BASE_URL.replace(/\/$/, '');
@@ -46,7 +48,7 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    const meta = route ?? { title: 'Tools Directory', description: 'ASCII-first web tools for JSON and color conversion.' };
+    const meta = route ?? { title: 'MonoTools', description: 'Private browser tools for developers.' };
     document.title = meta.title;
     document.querySelector<HTMLMetaElement>('meta[name="description"]')?.setAttribute('content', meta.description);
   }, [route]);
@@ -81,15 +83,15 @@ export default function App() {
   if (routePath === '/') page = <HomePage linkForPath={buildHref} onNavigateClick={onNavigateClick} />;
   if (routePath === '/json') page = <JsonPage />;
   if (routePath === '/color') page = <ColorPage />;
+  if (routePath === '/diff') page = <DiffPage />;
 
   return (
     <main className="screen">
       <header className="doc-header">
         <nav aria-label="Breadcrumb">
           <h1 className="breadcrumb">
-            <a href={buildHref('/')} onClick={(event) => onNavigateClick(event, '/')}>TOOLS</a>
-            <span aria-hidden="true">/</span>
-            <span>{route?.label ?? '404'}</span>
+            <a href={buildHref('/')} onClick={(event) => onNavigateClick(event, '/')}>MONOTOOLS</a>
+            {routePath !== '/' && <><span aria-hidden="true">/</span><span>{route?.label ?? '404'}</span></>}
           </h1>
         </nav>
         <button type="button" className="theme-control" onClick={toggleTheme} aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} theme`} aria-pressed={theme === 'dark'}>

@@ -15,8 +15,9 @@ export default defineConfig({
         main: path.resolve(import.meta.dirname, 'index.html'),
         json: path.resolve(import.meta.dirname, 'json/index.html'),
         color: path.resolve(import.meta.dirname, 'color/index.html'),
+        diff: path.resolve(import.meta.dirname, 'diff/index.html'),
       },
     },
   },
-  base: '/tools/',
+  base: '/monotools/',
 });

@@ -20,6 +20,7 @@ jobs:
       - run: npm ci
       - run: npm run lint
       - run: npm run check:json
+      - run: npm run check:diff
       - run: npm run bench:json
       - run: npm run build
       - name: Deploy

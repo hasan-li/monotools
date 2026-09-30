@@ -1,5 +1,5 @@
 // Requires the agent-browser CLI and a running dev server.
-// node bench/json-layout.mjs [http://localhost:5173/tools/json/]
+// node bench/json-layout.mjs [http://localhost:5173/monotools/json/]
 import assert from 'node:assert/strict';
 import { execFileSync } from 'node:child_process';
 
@@ -27,7 +27,7 @@ const noBoxScroll = (selector) => check(`(() => {
 })()`, `${selector} must grow with its content without output borders`);
 
 try {
-  browser('open', process.argv[2] ?? 'http://localhost:5173/tools/json/');
+  browser('open', process.argv[2] ?? 'http://localhost:5173/monotools/json/');
   for (const [width, height] of [[1440, 900], [820, 900], [390, 844], [320, 700]]) {
     browser('set', 'viewport', String(width), String(height));
     click('Formatted');

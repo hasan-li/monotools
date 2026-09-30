@@ -230,7 +230,7 @@ export default function JsonPage() {
       <section className="json-workspace" aria-label="JSON formatter">
       <article className="workspace-pane input-pane" onDragOver={(event) => event.preventDefault()} onDrop={onDrop}>
         <header className="workspace-header">
-          <h2 className="workspace-title">01 INPUT</h2>
+          <h2 className="workspace-title">INPUT</h2>
           <div className="workspace-actions">
             <label className="text-control file-control">Open file<input type="file" accept=".json,application/json" aria-label="Open JSON file" onChange={(event) => { void loadFile(event.target.files?.[0]); event.target.value = ''; }} /></label>
             <button type="button" className="text-control" onClick={clear}>Clear</button>
@@ -244,7 +244,7 @@ export default function JsonPage() {
       </article>
       <article className="workspace-pane" aria-busy={result.status === 'reading' || result.status === 'processing'}>
         <header className="workspace-header">
-          <h2 className="workspace-title">02 OUTPUT</h2>
+          <h2 className="workspace-title">OUTPUT</h2>
           <div className="workspace-actions" role="group" aria-label="JSON output controls">
             <div className="workspace-views" role="group" aria-label="Output view">
               <button type="button" className={`text-control ${view === 'formatted' ? 'is-current' : ''}`} aria-pressed={view === 'formatted'} onClick={() => setView('formatted')}>Formatted</button>
